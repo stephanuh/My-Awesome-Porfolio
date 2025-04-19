@@ -1,0 +1,120 @@
+.footer {
+    background-color: var(--text-purple);
+    color: var(--white);
+    padding-top: var(--space-2xl);
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+  
+  .footer-logo a {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+    display: inline-block;
+  }
+  
+  .footer-logo p {
+    color: var(--primary-light);
+    margin-bottom: 0;
+  }
+  
+  .footer-links h4,
+  .footer-social h4 {
+    color: var(--white);
+    margin-bottom: var(--space-md);
+    font-size: var(--font-lg);
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--space-xs);
+  }
+  
+  .footer-links h4::after,
+  .footer-social h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .footer-links a {
+    color: var(--medium-gray);
+    transition: color var(--transition-normal) ease, transform var(--transition-normal) ease;
+    display: inline-block;
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary-light);
+    transform: translateX(5px);
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: var(--space-md);
+  }
+  
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-md);
+    transition: all var(--transition-normal) ease;
+  }
+  
+  .social-icons a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-lg) 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+  
+  .footer-bottom p {
+    margin-bottom: 0;
+    color: var(--medium-gray);
+  }
+  
+  .heart {
+    color: var(--error-color);
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+  }

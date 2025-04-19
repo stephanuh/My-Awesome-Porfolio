@@ -1,0 +1,104 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+.skills {
+    background-color: var(--light-gray);
+    position: relative;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+  }
+  
+  .skill-category h3 {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    position: relative;
+    border-bottom: 2px solid var(--primary-light);
+  }
+  
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+  
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    color: var(--primary-color);
+    font-size: var(--font-xl);
+    flex-shrink: 0;
+    transition: all var(--transition-normal) ease;
+  }
+  
+  .skill-item:hover .skill-icon {
+    color: var(--white);
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .skill-info {
+    flex: 1;
+  }
+  
+  .skill-info h4 {
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-md);
+    color: var(--text-dark);
+  }
+  
+  .skill-progress {
+    height: 8px;
+    background-color: var(--medium-gray);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .skill-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-light), var(--primary-color));
+    border-radius: var(--radius-full);
+    position: relative;
+    width: 0;
+    animation: progress 1.5s ease-in-out forwards;
+  }
+  
+  .skill-percentage {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+  
+  @keyframes progress {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--width);
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+  }
