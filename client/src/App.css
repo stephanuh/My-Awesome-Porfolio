@@ -1,23 +1,24 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
 :root {
-  /* Primary Color Palette */
+  /* Light Theme (Default) */
   --primary-color: #9370DB;      /* Medium Purple/Lilac */
   --primary-light: #B19CD9;      /* Lighter Lilac */
   --primary-dark: #6A5ACD;       /* Darker Purple */
   
-  /* Neutral Colors */
   --white: #FFFFFF;
   --light-gray: #F8F9FA;
   --medium-gray: #E9ECEF;
   --dark-gray: #6C757D;
   
-  /* Text Colors */
   --text-dark: #2D2D2D;          /* Almost Black for regular text */
   --text-purple: #4B0082;        /* Dark Purple for headings */
   
-  /* Accent Colors */
-  --accent-color: #FFD700;       /* Gold/Yellow for call-to-action elements */
-  --success-color: #28A745;      /* Green for success messages */
-  --error-color: #DC3545;        /* Red for error messages */
+  --background-main: var(--white);
+  --background-secondary: var(--light-gray);
+  --card-background: var(--white);
+  --border-color: var(--medium-gray);
+  --shadow-color: rgba(0, 0, 0, 0.1);
   
   /* Font Sizes */
   --font-xs: 0.75rem;            /* 12px */
@@ -45,15 +46,49 @@
   --radius-lg: 1rem;             /* 16px */
   --radius-full: 9999px;         /* Full rounded corners */
   
+  /* Other colors */
+  --accent-color: #FFD700;       /* Gold/Yellow for call-to-action elements */
+  --success-color: #28A745;      /* Green for success messages */
+  --error-color: #DC3545;        /* Red for error messages */
+  
   /* Transitions */
   --transition-fast: 0.2s;
   --transition-normal: 0.3s;
   --transition-slow: 0.5s;
+  --transition-theme: 0.4s ease;
   
   /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 4px var(--shadow-color);
+  --shadow-md: 0 4px 6px var(--shadow-color);
+  --shadow-lg: 0 10px 15px var(--shadow-color);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Primary Colors - Sage Green */
+  --primary-color: #7EA182;      /* Sage Green */
+  --primary-light: #A4C1A9;      /* Lighter Sage */
+  --primary-dark: #5A7B5F;       /* Darker Sage */
+  
+  /* Background & Text */
+  --white: #FFFFFF;              /* Keep white for contrast purposes */
+  --light-gray: #2A2D3E;         /* Dark bluish-gray for backgrounds */
+  --medium-gray: #414559;        /* Medium dark gray */
+  --dark-gray: #D1D5DB;          /* Light gray for text */
+  
+  --text-dark: #E9ECEF;          /* Light gray for regular text */
+  --text-purple: #A4C1A9;        /* Sage green for headings */
+  
+  --background-main: #1A1D29;    /* Very dark blue-gray */
+  --background-secondary: #2A2D3E; /* Dark bluish-gray */
+  --card-background: #252837;    /* Dark card background */
+  --border-color: #414559;       /* Darker border */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* Darker shadow */
+  
+  /* Other colors adjusted for dark mode */
+  --accent-color: #F0C05A;       /* Warmer yellow */
+  --success-color: #4CAF50;      /* Adjusted green */
+  --error-color: #F44336;        /* Adjusted red */
 }
 
 /* Reset and Base Styles */
@@ -73,8 +108,9 @@ body {
   font-size: var(--font-md);
   line-height: 1.6;
   color: var(--text-dark);
-  background-color: var(--white);
+  background-color: var(--background-main);
   overflow-x: hidden;
+  transition: background-color var(--transition-theme), color var(--transition-theme);
 }
 
 a {
@@ -106,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   color: var(--text-purple);
   margin-bottom: var(--space-md);
+  transition: color var(--transition-theme);
 }
 
 h1 {
@@ -126,6 +163,7 @@ h4 {
 
 p {
   margin-bottom: var(--space-md);
+  transition: color var(--transition-theme);
 }
 
 /* Layout */
@@ -141,6 +179,7 @@ main {
 
 section {
   padding: var(--space-3xl) 0;
+  transition: background-color var(--transition-theme);
 }
 
 .container {
@@ -170,6 +209,7 @@ section {
   width: 80px;
   height: 4px;
   background-color: var(--primary-color);
+  transition: background-color var(--transition-theme);
 }
 
 .btn {
@@ -177,7 +217,7 @@ section {
   padding: var(--space-sm) var(--space-lg);
   font-weight: 500;
   border-radius: var(--radius-md);
-  transition: all var(--transition-normal) ease;
+  transition: all var(--transition-normal) ease, background-color var(--transition-theme), color var(--transition-theme), border-color var(--transition-theme);
   text-align: center;
 }
 
@@ -202,6 +242,36 @@ section {
 .btn-outline:hover {
   background-color: var(--primary-color);
   color: var(--white);
+}
+
+/* Sections with alternating backgrounds */
+section:nth-child(odd) {
+  background-color: var(--background-main);
+}
+
+section:nth-child(even) {
+  background-color: var(--background-secondary);
+}
+
+/* All cards, forms, and containers */
+.navbar, 
+.about-img-container, 
+.skill-card, 
+.project-card, 
+.contact-info, 
+.contact-form,
+.contact-card .slide.slide2 {
+  background-color: var(--card-background);
+  transition: background-color var(--transition-theme), box-shadow var(--transition-theme);
+  box-shadow: var(--shadow-md);
+}
+
+/* Border colors */
+.project-card,
+.form-group input,
+.form-group textarea {
+  border-color: var(--border-color);
+  transition: border-color var(--transition-theme);
 }
 
 /* Responsive Design */

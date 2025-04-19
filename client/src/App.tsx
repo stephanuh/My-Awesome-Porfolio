@@ -6,6 +6,8 @@ import Skills from './component/Skills';
 import Projects from './component/Projects';
 import Contact from './component/Contact';
 import Footer from './component/Footer';
+import ThemeToggle from './component/ThemeToggle';
+
 import './App.css'
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
 
   return (
     <div className="app">
+      <ThemeToggle />
       <Navbar scrolled={scrolled} />
       <main>
         <Banner />
