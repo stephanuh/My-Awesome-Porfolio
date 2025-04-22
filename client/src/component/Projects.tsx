@@ -6,32 +6,32 @@ const Projects = () => {
   const [projects] = useState<Project[]>([
     {
       id: 1,
-      title: 'E-commerce Website',
-      description: 'A fully responsive e-commerce platform with product filtering, cart functionality, and secure payment processing.',
-      image: '/images/project1.jpg',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-      liveLink: 'https://example.com/project1',
-      codeLink: 'https://github.com/yourusername/project1',
+      title: 'Book Search App',
+      description: 'A react-based book search engine powered by GraphQL & Apollo. Search, save, and manage your favorite books with authentication and sleek UI!📚',
+      image: '/images/Book-Collections.PNG',
+      technologies: ['MongoDB','Express','React', 'Node.js'],
+      liveLink: 'https://book-collections.onrender.com/',
+      codeLink: 'https://github.com/stephanuh/Book-Search',
       category: 'fullstack'
     },
     {
       id: 2,
-      title: 'Task Management App',
+      title: 'Weather Dashboard',
       description: 'A task management application with drag-and-drop interface, user authentication, and team collaboration features.',
-      image: '/images/project2.jpg',
-      technologies: ['React', 'Firebase', 'Material UI'],
-      liveLink: 'https://example.com/project2',
+      image: '/images/Weather-Project.PNG',
+      technologies: ['Apis', 'CRUD', 'Insomnia', 'JavaScript'],
+      liveLink: 'https://weather-dashboard-challenge-52kv.onrender.com/',
       codeLink: 'https://github.com/yourusername/project2',
-      category: 'frontend'
+      category: 'backend'
     },
     {
       id: 3,
-      title: 'Portfolio Website',
+      title: 'My Awesome Portfolio',
       description: 'A personal portfolio website showcasing my projects and skills with responsive design (this one!).',
       image: '/images/project3.jpg',
       technologies: ['React', 'TypeScript', 'Node.js'],
       liveLink: '#',
-      codeLink: 'https://github.com/yourusername/portfolio',
+      codeLink: 'https://github.com/stephanuh/My-Awesome-Porfolio',
       category: 'fullstack'
     }
   ]);
