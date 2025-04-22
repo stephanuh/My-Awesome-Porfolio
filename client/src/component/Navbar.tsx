@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <a href="#home" className="navbar-logo">
-          Logo here
+          Logo here "Coming soon"
         </a>
 
         <div className="navbar-toggle" onClick={toggleMenu}>

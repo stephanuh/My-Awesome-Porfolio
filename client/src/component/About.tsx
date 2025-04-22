@@ -12,8 +12,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-image">
             <div className="about-img-container">
-              {/* Replace with your actual image */}
-              <img src="/images/profile-placeholder.jpg" alt="Your Name" />
+              <img src="/images/My-Profile.jpg" alt="My-image" />
             </div>
           </div>
           
