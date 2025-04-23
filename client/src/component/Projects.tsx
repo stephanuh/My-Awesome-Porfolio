@@ -28,12 +28,42 @@ const Projects = () => {
       id: 3,
       title: 'My Awesome Portfolio',
       description: 'A personal portfolio website showcasing my projects and skills with responsive design (this one!).',
-      image: '/images/project3.jpg',
-      technologies: ['React', 'TypeScript', 'Node.js'],
+      image: '/images/project3.jpg', //add photo here
+      technologies: ['React', 'TypeScript', 'Node.js'], // add technologies here
       liveLink: '#',
       codeLink: 'https://github.com/stephanuh/My-Awesome-Porfolio',
       category: 'fullstack'
-    }
+    },
+    {
+      id: 4,
+      title: 'Brain Dead Buddies',
+      description: 'A Zombie Apocalypse blog site where users can create checklists, read blog, update their healthbar when comleted task, and delete posts.',
+      image: '/images/brain-dead-buddies.PNG',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'GraphQL', 'Apollo'],
+      liveLink: 'https://brain-dead-buddies.onrender.com/',
+      codeLink: 'https://github.com/NickDavis07/brain-dead-buddies',
+      category: 'fullstack'
+    },
+    {
+      id: 5,
+      title: 'Restaurant Take out Menu',
+      description: 'A simple note-taking application that allows users to create, read, update, and delete notes.',
+      image: '/images/python-order.PNG',
+      technologies: ['python'],
+      liveLink: '#', //Will make video link later
+        codeLink: 'https://github.com/stephanuh/python-order',
+        category: 'backend'
+      },
+      {
+        id: 6,
+        title: 'Meal-Planner',
+        description: 'A simple note-taking application that allows users to create, read, update, and delete notes.',
+        image: '/images/meal-planner.PNG',
+        technologies: ['html', 'css', 'javascript'],
+        liveLink: '#', //Will make video link later
+        codeLink: 'https://github.com/stephanuh/meal-planner',
+        category: 'frontend'
+      }
   ]);
 
   const [filter, setFilter] = useState('all');
