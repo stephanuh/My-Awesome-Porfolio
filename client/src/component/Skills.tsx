@@ -67,6 +67,12 @@ const Skills = () => {
           name: 'SQL',
           icon: 'fas fa-database',
           level: 60
+        },
+        {
+          id: 'python',
+          name: 'Python',
+          icon: 'fab fa-python',
+          level: 70
         }
       ]
     },
