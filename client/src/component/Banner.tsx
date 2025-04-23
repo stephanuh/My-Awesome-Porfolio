@@ -48,8 +48,8 @@ const Banner = () => {
           <div className="banner-text">
             <h1>Hi, I'm <span className="highlight">Stephanie</span></h1>
             <h2>
-              I'm a <span className="txt-rotate">{text}</span>
-              <span className="cursor">|</span>
+              I'm a {' '}<span className="txt-rotate">{text}</span>
+              <span className="cursor"></span>
             </h2>
             <p>
               I create beautiful and functional websites with a focus on both 
