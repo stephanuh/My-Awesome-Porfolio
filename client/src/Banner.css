@@ -207,3 +207,67 @@
       height: 200px;
     }
   }
+  /* Add this at the end of your Banner.css file */
+
+/* Dark Mode Banner Styles */
+[data-theme="dark"] .banner {
+  background: #081c15; /* Very dark green background */
+}
+
+/* Change wave color */
+[data-theme="dark"] .banner-wave svg path {
+  fill: #a3b18a; /* Sage green wave */
+}
+
+/* Make text readable on dark background */
+[data-theme="dark"] .banner-text h1,
+[data-theme="dark"] .banner-text h2,
+[data-theme="dark"] .banner-text p {
+  color: #e9ecef; /* Light gray for better contrast */
+}
+
+/* Update the highlight and rotating text */
+[data-theme="dark"] .highlight {
+  color: #a3b18a; /* Sage green */
+}
+
+[data-theme="dark"] .txt-rotate {
+  color: #a3b18a; /* Sage green */
+}
+
+[data-theme="dark"] .cursor {
+  background-color: #a3b18a; /* Sage green */
+}
+
+/* Update the shape color */
+[data-theme="dark"] .banner-shape {
+  background-color: rgba(163, 177, 138, 0.7); /* Semi-transparent sage green */
+}
+
+/* Update social icons and buttons */
+[data-theme="dark"] .banner-social a {
+  background-color: #2d3a2a; /* Darker green */
+  color: #a3b18a; /* Sage green */
+}
+
+[data-theme="dark"] .banner-social a:hover {
+  background-color: #a3b18a; /* Sage green */
+  color: #081c15; /* Very dark green */
+}
+
+/* Banner buttons in dark mode */
+[data-theme="dark"] .banner .btn-primary {
+  background-color: #a3b18a; /* Sage green */
+  color: #081c15; /* Very dark green */
+  border-color: #a3b18a; /* Sage green */
+}
+
+[data-theme="dark"] .banner .btn-outline {
+  border-color: #a3b18a; /* Sage green */
+  color: #a3b18a; /* Sage green */
+}
+
+[data-theme="dark"] .banner .btn-outline:hover {
+  background-color: #a3b18a; /* Sage green */
+  color: #081c15; /* Very dark green */
+}
