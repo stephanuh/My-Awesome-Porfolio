@@ -120,18 +120,6 @@ const Contact = () => {
                 <p>+1 (602) 218-1914</p>
               </div>
             </div>
-            
-            <div className="contact-social">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i>
-              </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </div>
           </div>
           
           <div className="contact-form">

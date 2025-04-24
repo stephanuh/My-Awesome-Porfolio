@@ -63,7 +63,7 @@ const Banner = () => {
               <a href="https://github.com/stephanuh" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/stephanie-sosa-alonzo-0b248434b/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin"></i>
               </a>
               <a href="mailto:stephaniesosa02@gmail.com">
