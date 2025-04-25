@@ -27,6 +27,7 @@ const About = () => {
             <p>
               My journey in web development started with front-end design, and I've been expanding my skills to include back-end technologies. I'm constantly learning and improving my craft through projects and courses.
             </p>
+            {/* //add digital artist and graphic designer */}
             
             <div className="about-details">
               <div className="about-detail">

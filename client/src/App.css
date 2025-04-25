@@ -316,3 +316,110 @@ section:nth-child(even) {
     font-size: var(--font-xl);
   }
 }
+
+/* Main section titles (My Skills, About Me, My Projects, Get In Touch) */
+.section-title, 
+.section-header h2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  color: #5e0f8b; /* Exact purple color from your images */
+}
+
+/* The main section title underlines */
+.section-title::after, 
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;          /* Position at the middle */
+  transform: translateX(-50%); /* Center it properly */
+  width: 140px;       /* Longer underline (increased from 80px) */
+  height: 3px;        /* Thickness of the underline */
+  background-color: #B19CD9; /* Purple color to match your design */
+  transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* For subtitles (like "What I can do") */
+.section-subtitle {
+  text-align: center;
+  color: #6c757d;     /* Gray color for subtitle */
+  margin-top: -1rem;  /* Pull it closer to the title */
+  margin-bottom: 2rem;
+}
+
+/* For secondary headings (Contact Information, Send Me a Message) */
+.contact-info h3,
+.contact-form h3,
+.footer h3,
+h3.contact-title {
+  position: relative;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+  color: #5e0f8b; /* Purple to match main headings */
+}
+
+/* Underlines for secondary headings */
+.contact-info h3::after,
+.contact-form h3::after,
+.footer h3::after,
+h3.contact-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;           /* Align to left for these secondary headings */
+  width: 220px;      /* Fixed width - slightly shorter than main titles */
+  height: 2px;       /* Slightly thinner than main titles */
+  background-color: #B19CD9; /* Purple color to match */
+  transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* For footer headings (Quick Links, Connect With Me) */
+.footer-heading,
+.footer h4 {
+  position: relative;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* White text for footer */
+}
+
+.footer-heading::after,
+.footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;           /* Align to left for footer headings */
+  width: 80px;       /* Fixed width */
+  height: 2px;       /* Slightly thinner */
+  background-color: #B19CD9; /* White underline in footer */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .section-header h2,
+[data-theme="dark"] .contact-info h3,
+[data-theme="dark"] .contact-form h3,
+[data-theme="dark"] h3.contact-title {
+  color: #a3b18a; /* Sage green in dark mode */
+}
+
+[data-theme="dark"] .section-title::after,
+[data-theme="dark"] .section-header h2::after,
+[data-theme="dark"] .contact-info h3::after,
+[data-theme="dark"] .contact-form h3::after,
+[data-theme="dark"] h3.contact-title::after {
+  background-color: #a3b18a; /* Sage green underlines in dark mode */
+}
+
+/* Footer in dark mode remains similar, maybe slightly adjusted */
+[data-theme="dark"] .footer-heading,
+[data-theme="dark"] .footer h4 {
+  color: #dadada; /* Slightly off-white in dark mode */
+}
+
+[data-theme="dark"] .footer-heading::after,
+[data-theme="dark"] .footer h4::after {
+  background-color: #a3b18a; /* Sage green underlines in footer dark mode */
+}
