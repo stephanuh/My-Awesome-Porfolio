@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../Skills.css';
+import '../styles/Skills.css';
 import { SkillCategory } from '../types/Skill';
 
 const Skills = () => {

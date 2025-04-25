@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
-import '../Navbar.css';
+import '../styles/Navbar.css';
 
 interface NavbarProps {
   scrolled: boolean;
