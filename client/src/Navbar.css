@@ -135,7 +135,6 @@
   }
 }
 
-/* Container for theme toggle and hamburger menu */
 .navbar-actions {
   display: flex;
   align-items: center;
@@ -143,32 +142,28 @@
   height: 100%;
 }
 
-/* Make sure the navbar container has proper layout */
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   padding: 0.5rem 1rem;
-  height: 70px; /* Fixed height for consistency */
+  height: 70px; 
 }
 
-/* Adjust hamburger menu to work with theme toggle */
 .navbar-toggle {
-  margin-left: 15px; /* Space between toggle and hamburger */
-  display: none; /* Hidden on desktop */
+  margin-left: 15px;
+  display: none;
   z-index: 1001;
 }
 
-/* Adjust theme toggle position */
 .theme-toggle {
   margin-right: 5px;
 }
 
-/* Media queries for responsive behavior */
 @media (max-width: 768px) {
   .navbar-toggle {
-    display: block; /* Show hamburger on mobile */
+    display: block;
   }
   
   .navbar-container {
@@ -180,7 +175,6 @@
   }
 }
 
-/* Make sure the navbar menu doesn't conflict */
 .navbar-menu {
   display: flex;
   gap: 2rem;
@@ -189,7 +183,7 @@
 @media (max-width: 768px) {
   .navbar-menu {
     position: fixed;
-    top: 70px; /* Match navbar height */
+    top: 70px; 
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
@@ -205,9 +199,6 @@
   }
 }
 
-
-/* Add this to your Navbar.css file to make the butterfly bigger */
-
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -215,7 +206,7 @@
 }
 
 .navbar-logo img {
-  height: 60px; /* Increased from previous size */
+  height: 60px;
   width: auto;
   max-width: none;
   object-fit: contain;
@@ -224,21 +215,18 @@
   top: 0;
 }
 
-/* Add a subtle hover effect */
 .navbar-logo img:hover {
   transform: scale(1.05);
 }
 
-/* Make sure navbar accommodates the larger logo */
 .navbar {
   padding: 0.5rem 0;
-  min-height: 80px; /* Ensure enough height for the logo */
+  min-height: 80px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar-logo img {
-    height: 50px; /* Slightly smaller on mobile but still readable */
+    height: 50px;
   }
   
   .navbar {

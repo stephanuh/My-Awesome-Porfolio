@@ -5,7 +5,7 @@
     align-items: center;
     position: relative;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    padding-top: 80px; /* Navbar height */
+    padding-top: 80px;
     overflow: hidden;
   }
   
@@ -36,7 +36,7 @@
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    height: 60px; /* Fixed height to prevent layout shift */
+    height: 60px;
   }
   
   .banner-text p {
@@ -207,67 +207,59 @@
       height: 200px;
     }
   }
-  /* Add this at the end of your Banner.css file */
 
-/* Dark Mode Banner Styles */
 [data-theme="dark"] .banner {
-  background: #081c15; /* Very dark green background */
+  background: #081c15;
 }
 
-/* Change wave color */
 [data-theme="dark"] .banner-wave svg path {
-  fill: #a3b18a; /* Sage green wave */
+  fill: #a3b18a;
 }
 
-/* Make text readable on dark background */
 [data-theme="dark"] .banner-text h1,
 [data-theme="dark"] .banner-text h2,
 [data-theme="dark"] .banner-text p {
-  color: #e9ecef; /* Light gray for better contrast */
+  color: #e9ecef;
 }
 
-/* Update the highlight and rotating text */
 [data-theme="dark"] .highlight {
-  color: #a3b18a; /* Sage green */
+  color: #a3b18a;
 }
 
 [data-theme="dark"] .txt-rotate {
-  color: #a3b18a; /* Sage green */
+  color: #a3b18a;
 }
 
 [data-theme="dark"] .cursor {
-  background-color: #a3b18a; /* Sage green */
+  background-color: #a3b18a;
 }
 
-/* Update the shape color */
 [data-theme="dark"] .banner-shape {
-  background-color: rgba(163, 177, 138, 0.7); /* Semi-transparent sage green */
+  background-color: rgba(163, 177, 138, 0.7); 
 }
 
-/* Update social icons and buttons */
 [data-theme="dark"] .banner-social a {
-  background-color: #2d3a2a; /* Darker green */
-  color: #a3b18a; /* Sage green */
+  background-color: #2d3a2a; 
+  color: #a3b18a;
 }
 
 [data-theme="dark"] .banner-social a:hover {
-  background-color: #a3b18a; /* Sage green */
-  color: #081c15; /* Very dark green */
+  background-color: #a3b18a; 
+  color: #081c15;
 }
 
-/* Banner buttons in dark mode */
 [data-theme="dark"] .banner .btn-primary {
-  background-color: #a3b18a; /* Sage green */
-  color: #081c15; /* Very dark green */
-  border-color: #a3b18a; /* Sage green */
+  background-color: #a3b18a; 
+  color: #081c15;
+  border-color: #a3b18a;
 }
 
 [data-theme="dark"] .banner .btn-outline {
-  border-color: #a3b18a; /* Sage green */
-  color: #a3b18a; /* Sage green */
+  border-color: #a3b18a;
+  color: #a3b18a;
 }
 
 [data-theme="dark"] .banner .btn-outline:hover {
-  background-color: #a3b18a; /* Sage green */
-  color: #081c15; /* Very dark green */
+  background-color: #a3b18a;
+  color: #081c15;
 }
