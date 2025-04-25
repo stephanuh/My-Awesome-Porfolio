@@ -1,5 +1,3 @@
-/* Updated styles for ThemeToggle.css */
-
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -56,20 +54,18 @@
   transform: translateX(24px);
 }
 
-/* Improved responsive styles for mobile */
 @media (max-width: 768px) {
   .theme-toggle {
-    top: 12px; /* Move it a bit higher */
-    right: 70px; /* Move it to the left of the hamburger menu */
-    transform: scale(0.85); /* Make it slightly smaller */
+    top: 12px;
+    right: 70px;
+    transform: scale(0.85);
   }
 }
 
-/* For very small screens */
 @media (max-width: 480px) {
   .theme-toggle {
-    top: 12px;
-    right: 60px; /* Move even further from the edge */
-    transform: scale(0.8); /* Make it even smaller */
+    top: 28px;
+    right: 68px;
+    transform: scale(0.9);
   }
 }
