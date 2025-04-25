@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../Banner.css';
+import '../styles/Banner.css';
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
