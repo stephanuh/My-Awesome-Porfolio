@@ -46,7 +46,7 @@ const Banner = () => {
       <div className="container banner-container">
         <div className="banner-content">
           <div className="banner-text">
-            <h1>Hi, I'm <span className="highlight">Stephanie</span></h1>
+            <h1>Hi, I'm <span className="highlight">Stephanie Sosa Alonzo</span></h1>
             <h2>
               I'm a {' '}<span className="txt-rotate">{text}</span>
               <span className="cursor"></span>

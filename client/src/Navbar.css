@@ -134,3 +134,114 @@
     font-size: var(--font-lg);
   }
 }
+
+/* Container for theme toggle and hamburger menu */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+/* Make sure the navbar container has proper layout */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 1rem;
+  height: 70px; /* Fixed height for consistency */
+}
+
+/* Adjust hamburger menu to work with theme toggle */
+.navbar-toggle {
+  margin-left: 15px; /* Space between toggle and hamburger */
+  display: none; /* Hidden on desktop */
+  z-index: 1001;
+}
+
+/* Adjust theme toggle position */
+.theme-toggle {
+  margin-right: 5px;
+}
+
+/* Media queries for responsive behavior */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block; /* Show hamburger on mobile */
+  }
+  
+  .navbar-container {
+    padding: 0.5rem;
+  }
+  
+  .navbar-actions {
+    position: static;
+  }
+}
+
+/* Make sure the navbar menu doesn't conflict */
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: fixed;
+    top: 70px; /* Match navbar height */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-background);
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  
+  .navbar-menu.active {
+    left: 0;
+  }
+}
+
+
+/* Add this to your Navbar.css file to make the butterfly bigger */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-logo img {
+  height: 60px; /* Increased from previous size */
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  position: relative;
+  top: 0;
+}
+
+/* Add a subtle hover effect */
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Make sure navbar accommodates the larger logo */
+.navbar {
+  padding: 0.5rem 0;
+  min-height: 80px; /* Ensure enough height for the logo */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-logo img {
+    height: 50px; /* Slightly smaller on mobile but still readable */
+  }
+  
+  .navbar {
+    min-height: 70px;
+  }
+}
