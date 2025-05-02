@@ -21,7 +21,7 @@ const Projects = () => {
       image: '/images/Weather-Project.PNG',
       technologies: ['Apis', 'CRUD', 'Insomnia', 'JavaScript'],
       liveLink: 'https://weather-dashboard-challenge-52kv.onrender.com/',
-      codeLink: 'https://github.com/yourusername/project2',
+      codeLink: 'https://github.com/stephanuh/Weather-Dashboard-Challenge',
       category: 'backend'
     },
     {
@@ -50,7 +50,7 @@ const Projects = () => {
       description: 'A simple note-taking application that allows users to create, read, update, and delete notes.',
       image: '/images/python-order.PNG',
       technologies: ['python'],
-      liveLink: '#', //Will make video link later
+      //liveLink: '#', //Will make video link later
         codeLink: 'https://github.com/stephanuh/python-order',
         category: 'backend'
       },
@@ -60,7 +60,7 @@ const Projects = () => {
         description: 'A simple note-taking application that allows users to create, read, update, and delete notes.',
         image: '/images/meal-planner.PNG',
         technologies: ['html', 'css', 'javascript'],
-        liveLink: '#', //Will make video link later
+        //liveLink: '#', //Will make video link later
         codeLink: 'https://github.com/stephanuh/meal-planner',
         category: 'frontend'
       }

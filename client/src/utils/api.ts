@@ -1,4 +1,3 @@
-// Update in your api.ts file
 export const submitContactForm = async (formData: {
     name: string;
     email: string;
@@ -6,7 +5,6 @@ export const submitContactForm = async (formData: {
     message: string;
   }) => {
     try {
-      // This will use the correct URL in both dev and production
       const baseUrl = process.env.NODE_ENV === 'production' 
         ? '' 
         : 'http://localhost:3000';
