@@ -56,26 +56,45 @@ const Contact = () => {
     });
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      console.log('Submitting form data:', formData);
       
-      // Reset form on success
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+      const response = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
       
-      setFormState({
-        submitting: false,
-        success: 'Thank you! Your message has been sent successfully.',
-        error: null
-      });
+      const data = await response.json();
+      console.log('Server response:', data);
+      
+      if (response.ok) {
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        
+        setFormState({
+          submitting: false,
+          success: 'Thank you! Your message has been sent successfully.',
+          error: null
+        });
+      } else {
+        setFormState({
+          submitting: false,
+          success: null,
+          error: data.message || 'Something went wrong. Please try again.'
+        });
+      }
     } catch (error) {
+      console.error('Error sending message:', error);
       setFormState({
         submitting: false,
         success: null,
-        error: 'Failed to send message. Please try again later.'
+        error: 'Failed to send message. Please check your connection.'
       });
     }
   };
@@ -97,7 +116,7 @@ const Contact = () => {
               </div>
               <div className="info-content">
                 <h4>Email</h4>
-                <p><a href="mailto:your.email@example.com">stephaniesosa02@gmail.com</a></p>
+                <p><a href="mailto:stephaniesosa02@gmail.com">stephaniesosa02@gmail.com</a></p>
               </div>
             </div>
             

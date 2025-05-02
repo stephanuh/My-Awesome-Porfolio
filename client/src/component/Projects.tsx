@@ -28,11 +28,11 @@ const Projects = () => {
       id: 3,
       title: 'My Awesome Portfolio',
       description: 'A personal portfolio website showcasing my projects and skills with responsive design (this one!).',
-      image: '/images/project3.jpg', //add photo here
-      technologies: ['React', 'TypeScript', 'Node.js'], // add technologies here
+      image: '/images/My-Logo.png',
+      technologies: ['Express.js', 'React', 'TypeScript', 'Node.js'],
       liveLink: '#',
       codeLink: 'https://github.com/stephanuh/My-Awesome-Porfolio',
-      category: 'fullstack'
+      category: 'frontend'
     },
     {
       id: 4,
