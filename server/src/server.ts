@@ -9,9 +9,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(cors({
-  origin: '*',
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://your-netlify-domain.netlify.app'] 
+    : ['http://localhost:3000'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
