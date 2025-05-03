@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-netlify-domain.netlify.app'] 
+    ? ['https://your-cloudflare-domain.pages.dev'] // Replace with your actual domain later
     : ['http://localhost:3000'],
   methods: ['GET', 'POST'],
   credentials: true
@@ -69,10 +69,10 @@ app.post('/api/contact', async (req: Request, res: Response) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname, '../client/dist')));
   
   app.get('*', (_: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
   });
 }
 
