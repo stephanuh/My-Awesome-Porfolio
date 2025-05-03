@@ -5,7 +5,7 @@
   "main": "server.js",
   "module": "ES2020",
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
     "seed": "node dist/seeds/seed.js",
@@ -24,7 +24,8 @@
     "graphql": "^16.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^8.4.3",
-    "nodemailer": "^6.10.1"
+    "nodemailer": "^6.10.1",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
@@ -34,7 +35,6 @@
     "@types/node": "^22.15.2",
     "@types/nodemailer": "^6.4.17",
     "nodemon": "^3.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "ts-node": "^10.9.2"
   }
 }
