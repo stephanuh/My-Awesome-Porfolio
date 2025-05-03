@@ -68,17 +68,14 @@ app.post('/api/contact', async (req: Request, res: Response) => {
   }
 });
 
-// Only serve static files and catch-all route in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
   
-  // Serve React app for any other routes (in production only)
   app.get('*', (_: Request, res: Response) => {
     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   });
 }
 
-// Simple route for testing the API in development
 app.get('/api/status', (req: Request, res: Response) => {
   res.json({ status: 'Server is running properly' });
 });
