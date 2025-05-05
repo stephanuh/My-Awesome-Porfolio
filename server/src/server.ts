@@ -4,6 +4,9 @@ import cors from 'cors';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 
+declare module 'cors';
+declare module 'nodemailer';
+
 dotenv.config();
 
 const app = express();
@@ -11,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-cloudflare-domain.pages.dev'] // Replace with your actual domain later
+    ? ['https://your-cloudflare-domain.pages.dev'] // Replace with  actual domain later
     : ['http://localhost:3000'],
   methods: ['GET', 'POST'],
   credentials: true
