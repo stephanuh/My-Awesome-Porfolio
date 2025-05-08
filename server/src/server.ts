@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-cloudflare-domain.pages.dev'] // Replace with  actual domain later
+    ? ['https://stephaniesosa.dev']
     : ['http://localhost:3000'],
   methods: ['GET', 'POST'],
   credentials: true
