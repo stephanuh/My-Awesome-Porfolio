@@ -43,8 +43,11 @@ const About = () => {
                 <span>Availability:</span> Available for freelance or full-time opportunities
               </div>
             </div>
-            
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a
+              href='/docs/Stephanie_Sosa_Resume.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='btn btn-primary'>
               Download Resume
             </a>
           </div>

@@ -56,18 +56,13 @@ const Contact = () => {
     });
     
     try {
-      console.log('Submitting form data:', formData);
-      
-      const response = await fetch('http://localhost:3000/api/contact', {
+      const response = await fetch('https://formspree.io/f/xjkwonpv', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
       });
-      
-      const data = await response.json();
-      console.log('Server response:', data);
       
       if (response.ok) {
         setFormData({
@@ -83,11 +78,7 @@ const Contact = () => {
           error: null
         });
       } else {
-        setFormState({
-          submitting: false,
-          success: null,
-          error: data.message || 'Something went wrong. Please try again.'
-        });
+        throw new Error('Failed to submit form');
       }
     } catch (error) {
       console.error('Error sending message:', error);
