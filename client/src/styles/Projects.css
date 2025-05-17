@@ -157,7 +157,19 @@
     gap: var(--space-sm);
   }
   
+[data-theme="dark"] .tech-tag {
+  background-color: rgba(163, 177, 138, 0.3);
+  color: #e9ecef;
+}
+
   .tech-tag {
+    background-color: rgba(177, 156, 217, 0.3);
+    color: #4B0082;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 16px;
+    display: inline-block;
+    transition: all 0.3s ease;
     background-color: var(--primary-light);
     color: var(--text-purple);
     padding: 0.3rem 0.8rem;
