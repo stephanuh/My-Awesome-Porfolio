@@ -47,7 +47,7 @@ const Projects = () => {
     {
       id: 5,
       title: 'Restaurant Take out Menu',
-      description: 'A simple note-taking application that allows users to create, read, update, and delete notes.',
+      description: 'The Generic Take Out Restaurant is a command-line application that allows users to browse a menu, place orders, and receive a summary of their purchase.',
       image: '/images/python-order.PNG',
       technologies: ['python'],
       //liveLink: '#', //Will make video link later
@@ -57,7 +57,7 @@ const Projects = () => {
       {
         id: 6,
         title: 'Meal-Planner',
-        description: 'A simple note-taking application that allows users to create, read, update, and delete notes.',
+        description: "This simple app provides a meal & grocery planner to simplify user's busy schedule.",
         image: '/images/meal-planner.PNG',
         technologies: ['html', 'css', 'javascript'],
         //liveLink: '#', //Will make video link later

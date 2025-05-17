@@ -15,7 +15,7 @@
 
 .navbar.scrolled {
   background-color: var(--card-background);
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   box-shadow: var(--shadow-md);
 }
 
