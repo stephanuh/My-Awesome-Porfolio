@@ -63,6 +63,16 @@ const Projects = () => {
         //liveLink: '#', //Will make video link later
         codeLink: 'https://github.com/stephanuh/meal-planner',
         category: 'frontend'
+      },
+      {
+        id: 7,
+        title: 'Mobile Phone Repair',
+        description: 'A mobile phone repair service website with booking functionality, service details, and customer testimonials.',
+        image: '/images/mpr.PNG',
+        technologies: ['html', 'css', 'javascript'],
+        liveLink: 'https://mpraz.com/',
+        codeLink: 'https://github.com/stephanuh/Mobile-fixation',
+        category: 'frontend'
       }
   ]);
 
